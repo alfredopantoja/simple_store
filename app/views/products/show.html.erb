@@ -1,0 +1,14 @@
+<% provide(:title, @product.name) %>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h1><%= @product.name %></h1>
+      <p>Price: <%= number_to_currency(@product.price) %></p>
+      <% if @product.released_at.nil? %>
+        <p>Released? <strong>No</strong></p>
+      <% else %>  
+        <p>Released? <strong>Yes.</strong> At <%= @product.released_at %></p>
+      <% end %>  
+    </section>  
+  </aside>  
+</div>  
