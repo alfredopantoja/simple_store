@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :product do
-    name  "Luchador mask"
-    price "34.50"
+    sequence(:name)  { |n| "Person #{n}" }
+    sequence(:price) { |n| n + 0.99  }
   end
 end  
